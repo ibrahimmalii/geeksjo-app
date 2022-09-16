@@ -11,7 +11,9 @@
 
 - **Run git clone git@github.com:ibrahimmalii/geeksjo-app.git**
 - **Run composer install --ignore-platform-reqs**
-- **Run php artisan migrate:fresh --seed**
+- **Run cp .env.example .env to generate .env file**
+- **Create geeksjo database and change DB_DATABASE in .env**
+- **Run php artisan migrate --seed**
 - **Run php artisan passport:install**
 - **Run php artisan serve**
 - **Login using credentials => email: admin@admin.com, password: password**
