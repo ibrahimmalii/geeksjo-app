@@ -7,10 +7,10 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-### Steps
+### Installation Steps
 
-- **git clone git@github.com:ibrahimmalii/geeksjo-app.git**
-- **composer install --ignore-platform-reqs**
-- **php artisan serve**
+- **Run git clone git@github.com:ibrahimmalii/geeksjo-app.git**
+- **Run composer install --ignore-platform-reqs**
+- **Run php artisan serve**
 
 # geeksjo-app
