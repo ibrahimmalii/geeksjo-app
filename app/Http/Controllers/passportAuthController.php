@@ -30,7 +30,7 @@ class passportAuthController extends Controller
             'password' => bcrypt($request->password)
         ]);
 
-        $accessToken = $user->createToken($request->email)->access_token;
+        $accessToken = $user->createToken($request->email)->accessToken;
 
         return response(['token' => $accessToken], 200);
     }

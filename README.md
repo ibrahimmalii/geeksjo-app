@@ -17,6 +17,7 @@
 - **Run php artisan passport:install**
 - **Run php artisan serve**
 - **Login using credentials => email: admin@admin.com, password: password**
+- **You can register new account from /register endpoint too**
 - **Use generated token to hate any endpoint**
 
 # geeksjo-app
