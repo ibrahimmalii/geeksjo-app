@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Area;
+use App\Models\City;
+use App\Models\Country;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,11 +17,22 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $countries = Country::factory(3)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        foreach ($countries as $country)
+        {
+            City::factory(2)->create([
+                'country_id' => $country->id
+            ]);
+        }
+
+        $citiesIds = City::all('id');
+        foreach ($citiesIds as $id)
+        {
+            Area::factory(5)->create([
+                'city_id' => $id
+            ]);
+        }
+
     }
 }
