@@ -6,6 +6,7 @@ namespace Database\Seeders;
 use App\Models\Area;
 use App\Models\City;
 use App\Models\Country;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -17,6 +18,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+
+        User::factory()->create([
+            'name' => 'ibrahim ali',
+            'email' => 'admin@admin.com'
+        ]);
+
         $countries = Country::factory(3)->create();
 
         foreach ($countries as $country)

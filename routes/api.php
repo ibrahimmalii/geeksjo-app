@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware(['auth:api'])->group(function () {
+    Route::get('/countries/{country}/cities', [\App\Http\Controllers\CountryController::class, 'cities']);
+    Route::resource('countries', \App\Http\Controllers\CountryController::class)->middleware('auth:api');
+    Route::resource('cities', \App\Http\Controllers\CityController::class);
+    Route::resource('areas', \App\Http\Controllers\AreaController::class);
 });
+
+

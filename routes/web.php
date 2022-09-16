@@ -17,7 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/countries/{country}/cities', [\App\Http\Controllers\CountryController::class, 'cities']);
-Route::resource('countries', \App\Http\Controllers\CountryController::class);
-Route::resource('cities', \App\Http\Controllers\CityController::class);
-Route::resource('areas', \App\Http\Controllers\AreaController::class);
+
+Route::post('register',[\App\Http\Controllers\passportAuthController::class,'register']);
+Route::post('login',[\App\Http\Controllers\passportAuthController::class,'login']);
+
+
