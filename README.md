@@ -14,6 +14,7 @@
 - **Run php artisan migrate:fresh --seed**
 - **Run php artisan passport:install**
 - **Run php artisan serve**
-- **Login using postman collection => email: admin@admin.com, password: password**
+- **Login using credintials => email: admin@admin.com, password: password**
+- **Use generated token to hate any endpoint**
 
 # geeksjo-app
