@@ -8,6 +8,7 @@ use App\Models\City;
 use App\Models\Country;
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Schema;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,7 +19,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-
         if(!User::all()->count()) {
             User::factory()->create([
                 'name' => 'ibrahim ali',
@@ -26,22 +26,8 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
-        $countries = Country::factory(3)->create();
-
-        foreach ($countries as $country)
-        {
-            City::factory(2)->create([
-                'country_id' => $country->id
-            ]);
-        }
-
-        $citiesIds = City::all('id');
-        foreach ($citiesIds as $id)
-        {
-            Area::factory(5)->create([
-                'city_id' => $id
-            ]);
-        }
-
+        Country::factory(10)->create();
+        City::factory(100)->create();
+        Area::factory(200)->create();
     }
 }

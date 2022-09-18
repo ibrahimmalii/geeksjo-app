@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Country;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,6 +19,7 @@ class CityFactory extends Factory
     {
         $cityName = fake()->unique()->city();
         return [
+            'country_id' => Country::pluck('id')->random(),
             'name' => $cityName,
             'slug' => str()->slug($cityName)
         ];

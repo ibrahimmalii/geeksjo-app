@@ -15,10 +15,11 @@ class AreaFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition()
+    public function definition(): array
     {
         $areaName = fake()->unique()->address();
         return [
+            'city_id' => City::pluck('id')->random(),
             'name' => $areaName,
             'slug' => str()->slug($areaName)
         ];

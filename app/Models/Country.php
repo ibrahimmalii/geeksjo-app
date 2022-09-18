@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * @method static truncate()
+ * @method static pluck(string $string)
  */
 class Country extends Model
 {
