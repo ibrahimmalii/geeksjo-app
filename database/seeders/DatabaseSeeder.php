@@ -18,6 +18,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        User::truncate();
+        Country::truncate();
+        City::truncate();
+        Area::truncate();
 
         User::factory()->create([
             'name' => 'ibrahim ali',
