@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * @method static truncate()
+ * @method static create(mixed $validated)
  */
 class Area extends Model
 {
