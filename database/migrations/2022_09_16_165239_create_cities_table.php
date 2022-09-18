@@ -11,11 +11,13 @@ return new class extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('cities', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('country_id');
+            $table->foreignId('country_id')
+                ->constrained()
+                ->cascadeOnDelete();
             $table->string('name')->unique();
             $table->string('slug')->unique();
             $table->timestamps();

@@ -18,15 +18,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::truncate();
         Country::truncate();
-        City::truncate();
-        Area::truncate();
 
-        User::factory()->create([
-            'name' => 'ibrahim ali',
-            'email' => 'admin@admin.com'
-        ]);
+        if(!User::all()->count()) {
+            User::factory()->create([
+                'name' => 'ibrahim ali',
+                'email' => 'admin@admin.com'
+            ]);
+        }
 
         $countries = Country::factory(3)->create();
 
