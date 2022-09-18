@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
-use App\Http\Requests\Area\UpdateAreaRequest;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\Area\StoreAreaRequest;
+use App\Http\Requests\Area\UpdateAreaRequest;
 use App\Models\Area;
 use Illuminate\Http\Response;
 

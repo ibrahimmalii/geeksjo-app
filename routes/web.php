@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 
-Route::post('register',[\App\Http\Controllers\passportAuthController::class,'register']);
-Route::post('login',[\App\Http\Controllers\passportAuthController::class,'login']);
+Route::post('register',[\App\Http\Controllers\Auth\passportAuthController::class,'register']);
+Route::post('login',[\App\Http\Controllers\Auth\passportAuthController::class,'login']);
 
 

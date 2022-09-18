@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\Country\StoreCountryRequest;
 use App\Http\Requests\Country\UpdateCountryRequest;
 use App\Models\Country;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\Routing\ResponseFactory;
-use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
 class CountryController extends Controller
